@@ -1,29 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import tLogo from '../assets/images/tLogo.png';
 
 function Header() {
+  // State to toggle mobile menu
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="bg-gray-900 text-white py-4 px-6 flex justify-between items-center">
+    <header className="caveat-custom text-2xl bg-gray-900 text-white py-0 px-6 flex flex-wrap justify-between items-center">
       {/* Logo */}
       <div className="flex items-center">
-        <img src="/path/to/logo.png" alt="Logo" className="h-8 mr-4" />
-        <h1 className="text-lg font-bold">Ambika Cane Idustries</h1>
+        <img src={tLogo} alt="Logo" className="h-20 w-40 ml-8 mr-4" />
+        {/* <h1 className="text-lg font-bold">Ambika Cane Industries</h1> */}
       </div>
       
-      {/* Header links */}
-      <ul className="flex gap-4">
-        <li className="text-lg font-medium">Home</li>
-        <li className="text-lg font-medium">About Us</li>
-        <li className="text-lg font-medium">Products</li>
-        <li className="text-lg font-medium">Gallery</li>
-        <li className="text-lg font-medium">Blogs</li>
+      {/* Mobile Menu Icon */}
+      <button 
+        className="block md:hidden focus:outline-none" 
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <svg 
+          className="h-6 w-6 text-white" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
+      
+      {/* Mobile Menu */}
+      <ul className={`md:flex md:items-center ${isOpen ? 'block' : 'hidden'}`}>
+        <li className="text-2xl font-medium my-2 md:my-0 md:mx-4">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="text-2xl font-medium my-2 md:my-0 md:mx-4">
+          <Link to="/about">About Us</Link>
+        </li>
+        <li className="text-2xl font-medium my-2 md:my-0 md:mx-4">
+          <Link to="/products">Products</Link>
+        </li>
+        <li className="text-2xl font-medium my-2 md:my-0 md:mx-4">
+          <Link to="/gallery">Gallery</Link>
+        </li>
+        <li className="text-2xl font-medium my-2 md:my-0 md:mx-4">
+          <Link to="/blog">Blogs</Link>
+        </li>
+        <li className="text-2xl  font-medium my-2 md:my-0 md:mx-4">
+        <Link to="/contact" className="bg-transparent hover:bg-gray-800 text-white ml-20 font-semibold py-2 px-4 border border-white rounded flex items-center mr-8">
+        Contact Us
+      </Link>
+        </li>
         {/* Add more header links as needed */}
       </ul>
       
       {/* Contact us Button */}
-      <button className="bg-transparent hover:bg-gray-800 text-white font-semibold py-2 px-4 border border-white rounded flex items-center">
-        Contact Us
-        
-      </button>
+      
     </header>
   );
 }

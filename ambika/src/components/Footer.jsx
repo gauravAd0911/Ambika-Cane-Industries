@@ -2,8 +2,8 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8 px-6">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+    <footer className=" bg-gray-900 text-white py-8 px-6">
+      <div className=" caveat-custom max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Address */}
         <div className="md:w-1/3 mb-6 md:mb-0">
           <h2 className="text-lg font-semibold mb-2">Contact Us</h2>
