@@ -1,16 +1,16 @@
 import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import AboutUs from '../components/AboutUs'
+import Services from '../components/Services'
 
-function About() {
+function Products() {
   return (
     <div>
-      <Header/>
-      <AboutUs/>
-      <Footer/>
+     <Header/>
+     <Services/>
+     <Footer/> 
     </div>
   )
 }
 
-export default About
+export default Products
