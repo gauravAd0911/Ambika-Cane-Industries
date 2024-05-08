@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import blog1 from './../assets/images/blog1.jpg';
+import blogd1 from './../assets/images/blogd1.jpg';
 
 
 
@@ -11,7 +11,7 @@ function Blogs() {
       title: '10 Eco-Friendly Furniture Trends to Watch in 2024',
       author: 'Gaurav Adulkar',
       date: 'May 15, 2024',
-      image: 'https://via.placeholder.com/300',
+      image: <img src="./../assets/images/blogd1.jpg" alt="" />,
       excerpt:
         'Discover the latest trends in eco-friendly furniture design and sustainability practices shaping the industry in 2024.',
     },

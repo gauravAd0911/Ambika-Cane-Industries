@@ -29,9 +29,9 @@ function Contact() {
             </form>
           </div>
           {/* Right column: Contact information */}
-          <div className='caveat-custom border border-orange-400 rounded-lg p-6'>
+          <div className=' inconsolata border border-orange-400 rounded-lg p-6'>
             <div className=''>
-            <h3 className=" text-3xl font-semibold text-orange-400 mb-4">Contact Information</h3>
+            <h3 className=" text-3xl caveat-custom font-semibold text-orange-400 mb-4">Contact Information</h3>
             <p className="mb-4 text-xl text-white">
               <span className="font-semibold">Address:</span> Opp. Grampachayat Office, Bazarwada Collem, Dharbandora, Goa 403410
             </p>
@@ -45,16 +45,16 @@ function Contact() {
             {/* Add social media links */}
             {/* Social media links */}
             <div className="flex items-center space-x-4">
-              <a href="#" className="text-white hover:text-blue-400">
+              <a href="https://www.instagram.com/ambika_cane_industry?igsh=aWlha25ra3g0ZTY5" className="text-white hover:text-blue-400">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a href="#" className="text-white hover:text-blue-400">
+              <a href="https://www.facebook.com/share/NY1axbCjAHk8Rkrd/?mibextid=qi2Omg" className="text-white hover:text-blue-400">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="#" className="text-white hover:text-blue-400">
+              {/* <a href="#" className="text-white hover:text-blue-400">
                 <FontAwesomeIcon icon={faTwitter} />
-              </a>
-              <a href="mailto:info@ambikaCane.com" className="text-white hover:text-blue-400">
+              </a> */}
+              <a href="mailto:ambikacaneindu@gmail.com" className="text-white hover:text-blue-400">
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
             </div>
